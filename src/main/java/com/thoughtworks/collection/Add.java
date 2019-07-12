@@ -21,11 +21,15 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        return arrayList.stream().mapToInt(x->x*3+2).sum();
+        return arrayList.stream()
+                .mapToInt(x->x*3+2)
+                .sum();
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
-        return arrayList.stream().map(x -> x%2!=0?x*3+2:x).collect(Collectors.toList());
+        return arrayList.stream()
+                .map(x -> x%2!=0?x*3+2:x)
+                .collect(Collectors.toList());
     }
 
     public int getSumOfProcessedOdds(List<Integer> arrayList) {
@@ -37,7 +41,9 @@ public class Add {
 //    }
 
     public double getAverageOfEven(List<Integer> arrayList) {
-        return arrayList.stream().filter(x -> x%2==0).collect(Collectors.averagingDouble(x->x));
+        return arrayList.stream()
+                .filter(x -> x%2==0)
+                .collect(Collectors.averagingDouble(x->x));
     }
 
     public boolean isIncludedInEvenIndex(List<Integer> arrayList, Integer specialElment) {
@@ -45,7 +51,10 @@ public class Add {
     }
 
     public List<Integer> getUnrepeatedFromEvenIndex(List<Integer> arrayList) {
-        return arrayList.stream().filter(x->x%2==0).distinct().collect(Collectors.toList());
+        return arrayList.stream()
+                .filter(x->x%2==0)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
 //    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
